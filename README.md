@@ -31,6 +31,35 @@ This individual academic project presents a secure and highly available AWS refe
 
 ## Architecture Summary
 The proposed solution uses a multi-tier, multi-Availability Zone architecture. Internet-facing traffic is routed through a load balancer. Application resources are isolated from direct public access, and the database tier is restricted to approved application-tier traffic. IAM groups, roles, MFA, and least-privilege policies support separation of duties. CloudTrail and CloudWatch provide audit and monitoring capabilities, while encryption services protect data at rest and in transit.
+## Architecture Diagram
+
+architecture/aws-architecture-diagram.png
+
+## Selected Control Validation
+
+### CloudTrail Management Events
+
+![CloudTrail management event validationvalidation.png
+
+CloudTrail recorded selected management activities performed during hands-on validation, including launch-template and security-group operations. Account, user, and resource identifiers were removed before publication.
+
+### CloudWatch Alarm Demonstration
+
+screenshots/cloudwatch-alarm-demonstration.png
+
+A CloudWatch alarm was prepared to demonstrate operational monitoring. The AWS Academy lab role restricted some account-level or production configuration activities.
+
+### IAM Password Policy Demonstration
+
+screenshots/iam-password-policy-demonstration.png
+
+An IAM password policy was prepared to demonstrate account-level password controls. The laboratory role restricted committing the proposed policy.
+
+### Security Group Rule Validation
+
+screenshots/security-group-inbound-rule-validation.png
+
+A database-tier security group rule was configured and reviewed as part of the selected network-control validation. The implementation followed the academic case requirement.
 
 ## Hands-on Validation
 Selected controls were configured or reviewed in AWS Academy, including:
